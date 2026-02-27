@@ -1,3 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arjun Padmanaban | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:'Montserrat',sans-serif;
+}
+
+body{
+background: linear-gradient(135deg,#0f0f0f,#1a1a2e);
+color:#ffffff;
+}
+
+nav{
+position:fixed;
+width:100%;
+top:0;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,0.7);
+backdrop-filter: blur(10px);
+z-index:1000;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-weight:500;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#00f5ff;
+}
+
+section{
+padding:120px 8%;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero h1{
+font-size:55px;
+font-weight:700;
+}
+
+.hero span{
+color:#00f5ff;
+}
+
+.hero p{
+margin-top:15px;
+font-size:18px;
+color:#cccccc;
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:10px 25px;
+background:#00f5ff;
+color:black;
+text-decoration:none;
+font-weight:600;
+border-radius:30px;
+transition:0.3s;
+}
+
+.btn:hover{
+background:white;
+}
+
+.section-title{
+font-size:32px;
+margin-bottom:30px;
+border-left:4px solid #00f5ff;
+padding-left:15px;
+}
+
+.card-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card{
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:15px;
+border:1px solid rgba(255,255,255,0.1);
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:#00f5ff;
+}
+
+.card img{
+width:100%;
+border-radius:10px;
+margin-top:15px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+th, td{
+padding:12px;
+border:1px solid rgba(255,255,255,0.2);
+text-align:center;
+}
+
+th{
+background:#00f5ff;
+color:black;
+}
+
+ul{
+margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
 <nav>
 <h3>Arjun</h3>
 <div>
@@ -14,7 +163,7 @@
 
 <!-- HERO -->
 <section id="hero" class="hero">
-<h1>Hi, I'm <span>Arjun</span></h1>
+<h1>Hi, I'm <span>Arjun Padmanaban</span></h1>
 <p>Computer Science Student | AI & IoT Developer</p>
 <a href="#projects" class="btn">Explore My Work</a>
 </section>
@@ -22,34 +171,56 @@
 <!-- PROFILE -->
 <section id="profile">
 <h2 class="section-title">Student Profile</h2>
-<div class="card-container">
-<div class="card">
-<h3>Basic Info</h3>
+
+<div style="display:flex; flex-wrap:wrap; gap:40px;">
+
+<div style="flex:1;">
+<h3>Personal Information</h3>
 <p><strong>Name:</strong> Arjun Padmanaban</p>
 <p><strong>Roll No:</strong> XXXXX</p>
 <p><strong>Email:</strong> your@email.com</p>
 </div>
-<div class="card">
+
+<div style="flex:1;">
 <h3>Skills</h3>
-<p>Python</p>
-<p>Java</p>
-<p>AI (BFS, A*)</p>
-<p>IoT (MQTT)</p>
+<ul>
+<li>Python</li>
+<li>Java</li>
+<li>AI (BFS, A*)</li>
+<li>IoT – MQTT, 6LoWPAN</li>
+<li>MySQL</li>
+</ul>
 </div>
+
 </div>
 </section>
 
 <!-- ACADEMIC -->
 <section id="academic">
 <h2 class="section-title">Academic Details</h2>
-<p><strong>Semester Results:</strong></p>
-<p>Sem 1 – 8.5 CGPA</p>
-<p>Sem 2 – 8.7 CGPA</p>
 
-<p style="margin-top:20px;"><strong>Courses Completed:</strong></p>
+<table>
+<tr>
+<th>Semester</th>
+<th>CGPA</th>
+<th>Year</th>
+</tr>
+<tr>
+<td>Sem 1</td>
+<td>8.5</td>
+<td>2023</td>
+</tr>
+<tr>
+<td>Sem 2</td>
+<td>8.7</td>
+<td>2024</td>
+</tr>
+</table>
+
+<h3 style="margin-top:30px;">Courses Completed</h3>
 <ul>
 <li>Data Structures</li>
-<li>Database Management</li>
+<li>Database Management Systems</li>
 <li>Artificial Intelligence</li>
 <li>Internet of Things</li>
 </ul>
@@ -58,49 +229,63 @@
 <!-- PROJECTS -->
 <section id="projects">
 <h2 class="section-title">Projects</h2>
+
 <div class="card-container">
+
 <div class="card">
-<h3>Smart IoT Monitoring</h3>
-<p>Real-time monitoring using sensors and MQTT protocol.</p>
+<h3>Smart IoT Monitoring System</h3>
+<p><strong>Description:</strong> Real-time monitoring using MQTT and sensors.</p>
+<p><strong>Tools:</strong> Python, MQTT, Arduino</p>
 </div>
+
 <div class="card">
 <h3>AI Pathfinding Visualizer</h3>
-<p>Implemented BFS and A* algorithm for intelligent routing.</p>
+<p><strong>Description:</strong> Implemented BFS and A* for intelligent routing.</p>
+<p><strong>Tools:</strong> Python</p>
 </div>
+
 </div>
 </section>
 
-<!-- CERTIFICATES -->
+<!-- CERTIFICATIONS -->
 <section id="certificates">
-<h2 class="section-title">Certificates</h2>
+<h2 class="section-title">Certifications</h2>
+
+<div class="card-container">
 <div class="card">
 <h3>IoT Certification</h3>
 <p>NPTEL | 2025</p>
 <img src="certificate.jpg" alt="Certificate">
+<a href="certificate.jpg" target="_blank" class="btn">View Certificate</a>
+</div>
 </div>
 </section>
 
 <!-- INTERNSHIP -->
 <section id="internship">
 <h2 class="section-title">Internship</h2>
-<div class="card">
+
+<div style="padding:20px; border-left:4px solid #00f5ff;">
 <h3>Company Name</h3>
 <p><strong>Duration:</strong> June 2025 – July 2025</p>
-<p>Worked on IoT system development and backend integration.</p>
+<p><strong>Work Done:</strong></p>
+<ul>
+<li>Developed IoT backend monitoring system</li>
+<li>Integrated devices with cloud dashboard</li>
+<li>Optimized system performance</li>
+</ul>
 </div>
 </section>
 
 <!-- ACHIEVEMENTS -->
 <section id="achievements">
 <h2 class="section-title">Achievements</h2>
-<div class="card-container">
-<div class="card">
-<h3>🏆 Hackathon Finalist</h3>
-</div>
-<div class="card">
-<h3>🥇 Coding Competition Rank 5</h3>
-</div>
-</div>
+
+<ul>
+<li>🏆 Hackathon Finalist</li>
+<li>🥇 Coding Competition – Rank 5</li>
+<li>📜 Academic Excellence Award</li>
+</ul>
 </section>
 
 <!-- CONTACT -->
@@ -108,3 +293,6 @@
 <h2 class="section-title">Contact</h2>
 <p>Email: your@email.com</p>
 </section>
+
+</body>
+</html>
