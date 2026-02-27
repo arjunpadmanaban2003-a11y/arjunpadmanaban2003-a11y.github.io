@@ -1,185 +1,110 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arjun | Portfolio</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-font-family:'Montserrat',sans-serif;
-}
-
-body{
-background: linear-gradient(135deg,#0f0f0f,#1a1a2e);
-color:#fff;
-}
-
-nav{
-position:fixed;
-width:100%;
-top:0;
-padding:20px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(0,0,0,0.6);
-backdrop-filter: blur(10px);
-z-index:1000;
-}
-
-nav a{
-color:#fff;
-text-decoration:none;
-margin-left:30px;
-font-weight:500;
-transition:0.3s;
-}
-
-nav a:hover{
-color:#00f5ff;
-}
-
-section{
-padding:120px 8%;
-}
-
-.hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-}
-
-.hero h1{
-font-size:55px;
-font-weight:700;
-}
-
-.hero span{
-color:#00f5ff;
-}
-
-.hero p{
-margin-top:15px;
-font-size:18px;
-color:#ccc;
-}
-
-.btn{
-margin-top:30px;
-padding:12px 30px;
-background:#00f5ff;
-color:#000;
-text-decoration:none;
-font-weight:600;
-border-radius:30px;
-transition:0.3s;
-}
-
-.btn:hover{
-background:#fff;
-}
-
-.section-title{
-font-size:32px;
-margin-bottom:40px;
-border-left:4px solid #00f5ff;
-padding-left:15px;
-}
-
-.card-container{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
-}
-
-.card{
-background:rgba(255,255,255,0.05);
-padding:25px;
-border-radius:15px;
-backdrop-filter: blur(10px);
-transition:0.4s;
-border:1px solid rgba(255,255,255,0.1);
-}
-
-.card:hover{
-transform:translateY(-10px);
-border-color:#00f5ff;
-}
-
-.card img{
-width:100%;
-border-radius:10px;
-margin-top:15px;
-}
-</style>
-</head>
-
-<body>
-
 <nav>
 <h3>Arjun</h3>
 <div>
-<a href="#about">About</a>
+<a href="#hero">Home</a>
+<a href="#profile">Profile</a>
+<a href="#academic">Academic</a>
 <a href="#projects">Projects</a>
 <a href="#certificates">Certificates</a>
+<a href="#internship">Internship</a>
+<a href="#achievements">Achievements</a>
 <a href="#contact">Contact</a>
 </div>
 </nav>
 
-<section class="hero">
+<!-- HERO -->
+<section id="hero" class="hero">
 <h1>Hi, I'm <span>Arjun</span></h1>
 <p>Computer Science Student | AI & IoT Developer</p>
 <a href="#projects" class="btn">Explore My Work</a>
 </section>
 
-<section id="about">
-<h2 class="section-title">About Me</h2>
-<p>
-I am passionate about Artificial Intelligence, IoT systems and building
-real-world problem-solving applications. I continuously improve my skills
-in programming, system design and modern technologies.
-</p>
+<!-- PROFILE -->
+<section id="profile">
+<h2 class="section-title">Student Profile</h2>
+<div class="card-container">
+<div class="card">
+<h3>Basic Info</h3>
+<p><strong>Name:</strong> Arjun Padmanaban</p>
+<p><strong>Roll No:</strong> XXXXX</p>
+<p><strong>Email:</strong> your@email.com</p>
+</div>
+<div class="card">
+<h3>Skills</h3>
+<p>Python</p>
+<p>Java</p>
+<p>AI (BFS, A*)</p>
+<p>IoT (MQTT)</p>
+</div>
+</div>
 </section>
 
+<!-- ACADEMIC -->
+<section id="academic">
+<h2 class="section-title">Academic Details</h2>
+<p><strong>Semester Results:</strong></p>
+<p>Sem 1 – 8.5 CGPA</p>
+<p>Sem 2 – 8.7 CGPA</p>
+
+<p style="margin-top:20px;"><strong>Courses Completed:</strong></p>
+<ul>
+<li>Data Structures</li>
+<li>Database Management</li>
+<li>Artificial Intelligence</li>
+<li>Internet of Things</li>
+</ul>
+</section>
+
+<!-- PROJECTS -->
 <section id="projects">
 <h2 class="section-title">Projects</h2>
 <div class="card-container">
 <div class="card">
-<h3>Smart IoT Monitoring System</h3>
-<p>Built a real-time IoT monitoring system using sensors and MQTT protocol.</p>
+<h3>Smart IoT Monitoring</h3>
+<p>Real-time monitoring using sensors and MQTT protocol.</p>
 </div>
 <div class="card">
 <h3>AI Pathfinding Visualizer</h3>
-<p>Implemented BFS and A* algorithms for intelligent route optimization.</p>
+<p>Implemented BFS and A* algorithm for intelligent routing.</p>
 </div>
 </div>
 </section>
 
+<!-- CERTIFICATES -->
 <section id="certificates">
 <h2 class="section-title">Certificates</h2>
-<div class="card-container">
 <div class="card">
 <h3>IoT Certification</h3>
-<p>NPTEL</p>
+<p>NPTEL | 2025</p>
 <img src="certificate.jpg" alt="Certificate">
+</div>
+</section>
+
+<!-- INTERNSHIP -->
+<section id="internship">
+<h2 class="section-title">Internship</h2>
+<div class="card">
+<h3>Company Name</h3>
+<p><strong>Duration:</strong> June 2025 – July 2025</p>
+<p>Worked on IoT system development and backend integration.</p>
+</div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+<h2 class="section-title">Achievements</h2>
+<div class="card-container">
+<div class="card">
+<h3>🏆 Hackathon Finalist</h3>
+</div>
+<div class="card">
+<h3>🥇 Coding Competition Rank 5</h3>
 </div>
 </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
 <h2 class="section-title">Contact</h2>
 <p>Email: your@email.com</p>
 </section>
-
-</body>
-</html>
